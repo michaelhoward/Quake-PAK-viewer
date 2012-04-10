@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quake PAK Viewer</title>
+<meta name="description" content="A HTML5/Javascript Quake PAK viewer" />
+<meta name="keywords" content="Quake, PAK,HTML5,Javascript,viewer" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29211605-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+
+<body>
+<script src="Three.js"></script>
+<script src="q1.js"></script>
+
+<input type='file' id='fileloader' style='font-family: Courier; font-size:10px'></input><br>
+
+
+<div id='sounds' style="border:1px black solid;">Sounds<br>
+<select id='soundSelector'></select><audio id='player' controls></audio><br>
+</div>
+
+
+<script type="text/javascript">
+document.getElementById('fileloader').addEventListener('change', LoadFile, false);
+document.getElementById('soundSelector').addEventListener('change', changeWave, false);
+
+</script>
+
+
+</body>
+
+</html>
